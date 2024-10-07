@@ -1,0 +1,13 @@
+import random
+
+# Lista de nombres posibles
+nombres = ["Juan", "María", "Carlos", "Ana", "Pedro", "Laura", "Miguel", "Sofía", "David", "Elena"]
+
+# Crear o abrir el archivo para escribir
+with open("nombres_aleatorios.txt", "w") as archivo:
+    # Generar 10 nombres aleatorios
+    for i in range(10):
+        nombre_aleatorio = random.choice(nombres)
+        archivo.write(nombre_aleatorio + "\n")
+
+print("Los nombres aleatorios se han escrito en el archivo 'nombres_aleatorios.txt'.")
